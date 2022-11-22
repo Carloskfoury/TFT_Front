@@ -1,0 +1,25 @@
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <h4 class="mb-1">Herois</h4>
+    </div>
+  </a>
+  <div *ngFor="let heroi of herois">
+    <a class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <div>
+          <h1>{{heroi.heroiNome}}</h1>
+          <app-informacao-heroi *ngIf="HeroisSelecionados.includes(heroi)" [heroi]="heroi" ></app-informacao-heroi>
+        </div>
+        <div>
+          <td><button type="button" (click)="deleteHeroi(heroi.id)">Deletar</button>
+            <button type="button"(click)="SelecionarHeroi(heroi)">Informaçao do Heroi</button></td>
+            <button (click)="test()">Test</button>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,9 @@
+<form [formGroup]="GrupoHeroi" (ngSubmit)="SubmitHeroi()">
+  <div class="form-group">
+    <label for="heroiNome">Nome do Heroi</label>
+    <input type="text" formControlName="heroiNome" class="form-control" aria-describedby="heroiHelp" placeholder="Digite nome do Heroi">
+    <small id="heroiHelp" class="form-text text-muted">Informe o nome do Heroi para gerar um novo</small>
+  </div>
+<button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+

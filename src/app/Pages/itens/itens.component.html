@@ -1,0 +1,17 @@
+
+<div class="list-group">
+  <a  class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <h4 class="mb-1">Descrição</h4>
+    </div>
+  </a>
+  <div *ngFor="let item of itens">
+    <a  class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h6>{{item.itensNome}}</h6>
+        <td><button type="button" (click)="deleteItem(item.id)"> Deletar</button></td>
+      </div>
+      <p>{{item.itensAtributos}}</p>
+    </a>
+  </div>
+</div>

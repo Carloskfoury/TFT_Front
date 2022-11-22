@@ -1,0 +1,14 @@
+<div *ngFor="let item of heroi.itens">
+  <div>
+    <h6>{{item.itensNome}}</h6>
+    <p>{{item.itensAtributos}}</p>
+  </div>
+</div>
+<div *ngFor="let sinergia of heroi.sinergias">
+  <h6>{{sinergia.sinergiaNome}}</h6>
+  <p>{{sinergia.sinergiaBuff}}</p>
+</div>
+<div>
+  <app-modificador-heroi [heroi]="heroi"></app-modificador-heroi>
+</div>
+

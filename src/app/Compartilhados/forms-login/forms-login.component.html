@@ -1,0 +1,10 @@
+<form [formGroup]="GrupCliente" (ngSubmit)="SubmiCliente()">
+  <div class="form-group">
+    <label for="Nome">Nome do Cliente</label>
+    <input type="text" formControlName="Nome" class="form-control" aria-describedby="clienteHelp" placeholder="Digite o nome do usuario">
+    <label for="Senha">Digite a Senha</label>
+    <input type="text" formControlName="Senha" class="form-control" aria-describedby="clienteHelp" placeholder="Digite sua senha">
+    <small id="sinergiaHelp" class="form-text text-muted">Crie um nome de Login e Senha</small>
+  </div>
+<button type="submit" class="btn btn-primary">Enviar</button>
+</form>

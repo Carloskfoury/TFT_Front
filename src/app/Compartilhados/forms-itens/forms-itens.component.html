@@ -1,0 +1,12 @@
+<form [formGroup]="GrupItens" (ngSubmit)="SubmitIten()">
+  <div class="form-group">
+    <label for="itensNome">Nome do Item</label>
+    <input type="text" formControlName="itensNome" class="form-control" aria-describedby="itemHelp" placeholder="Digite nome do Item">
+    <label for="sinergiaBuff">Efeito da Sinergia</label>
+    <input type="text" formControlName="sinergiaBuff" class="form-control" aria-describedby="itemHelp" placeholder="Digite qual é o efeito que o item  faz">
+    <small id="sinergiaHelp" class="form-text text-muted">Informe o nome da Sinergia e efeito para gerar um novo</small>
+  </div>
+<button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+

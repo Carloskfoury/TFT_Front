@@ -1,9 +1,29 @@
-<form [formGroup]="GrupoHeroi" (ngSubmit)="SubmitHeroi()">
-  <div class="form-group">
-    <label for="heroiNome">Nome do Heroi</label>
-    <input type="text" formControlName="heroiNome" class="form-control" aria-describedby="heroiHelp" placeholder="Digite nome do Heroi">
-    <small id="heroiHelp" class="form-text text-muted">Informe o nome do Heroi para gerar um novo</small>
+<section class="area-heroi">
+  <div class="novo-heroi">
+    <div class="titulo">
+      <h1>Criar Heroi</h1>
+    </div>
+    <div class="imagem">
+      <img src="https://teamfighttactics.leagueoflegends.com/static/24eaaf3a8fb2a932281f8990cd93f475/cdc7c/pengu.png" >
+    </div>
+    <form  [formGroup]="NovoHeroi" (ngSubmit)="SubmitHeroi()">
+      <input type="text" formControlName="heroiNome"  placeholder="Digite nome do Heroi">
+      <input type="text" formControlName="foto"  placeholder="Insira o link da imagem do heroi criado">
+      <label for="Estrela">Estrela do Heroi
+      <select name="estrela" id="estrela-forms" formControlName="estrela" class="select-custom">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      </label>
+      <label for="itens">Item do heroi
+      <select name="itens" id="" >
+        <option *ngFor="let item of itens"> {{item.itensNome}}</option>
+      </select>
+      </label>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
   </div>
-<button type="submit" class="btn btn-primary">Enviar</button>
-</form>
-
+</section>

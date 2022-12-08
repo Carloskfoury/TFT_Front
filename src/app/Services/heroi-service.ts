@@ -20,13 +20,14 @@ export class HeroiService {
      return this.http.get(this.url+"/api/Heroi/GetHeroiAsync")
    }
 
-   postHeroi(Nome:object){
+   postHeroi(Heroi:Heroi){
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.http.post(this.url+"/api/Heroi",Nome,({headers:headers})).subscribe(res => console.log(res))
+    return this.http.post<Heroi>(this.url+"/api/Heroi",Heroi,({headers:headers})).subscribe(res => console.log(res))
    }
 
    deleteHeroi(Id:String){
-    return this.http.delete(this.url+"/api/Heroi/deleteByid/"+Id).subscribe(data => console.log(data))
+    return this.http.delete(this.url+"/api/Heroi/deleteByid/"+Id).subscribe(data=> console.log(data))
+
    }
 
    modificarHeroi(Heroi:Object,id:any){

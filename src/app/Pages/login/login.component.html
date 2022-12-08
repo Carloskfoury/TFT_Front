@@ -1,10 +1,15 @@
-<form [formGroup]="LoginCliente" (ngSubmit)="SubmiCliente()">
-  <div class="form-group">
-    <label for="Nome">Login do usuario</label>
-    <input type="text" formControlName="Nome" class="form-control" aria-describedby="clienteHelp" placeholder="Digite o nome do usuario">
-    <label for="Senha">Digite a Senha</label>
-    <input type="text" formControlName="Senha" class="form-control" aria-describedby="clienteHelp" placeholder="Digite sua senha">
+<section class="area-login">
+  <div class="login">
+    <div  class="logo">
+      <img src="https://cdn-ggtech.s3-eu-west-3.amazonaws.com/uploads/games/logos/1630585636661_tft-bug-flat-white2.png" >
+    </div>
+    <form [formGroup]="LoginCliente" (ngSubmit)="SubmiCliente()">
+      <input type="text" formControlName="Nome" class="form-control"  placeholder="Nome do usuario" autofocus>
+      <input type="password" formControlName="Senha" class="form-control" placeholder="Senha">
+    <button type="submit" class="enviar">Entrar</button>
+    </form>
+    <div class="link-user">
+      <p>Ainda não tem um  conta?<a href="/criarUsuario">Criar Conta</a></p>
+    </div>
   </div>
-<button type="submit" class="btn btn-primary">Enviar</button>
-</form>
-
+</section>

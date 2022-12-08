@@ -1,0 +1,63 @@
+.containerMain{
+
+}
+.header{
+  background-color:#181920;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom-left-radius : 10px;
+  border-bottom-right-radius : 10px;
+}
+img{
+  width: 120px;
+  height: 50px;
+}
+.container-link a{
+  color:#5568fe;
+  text-decoration: none;
+}
+.container-links{
+  display: flex;
+  height: 100%;
+}
+.container-link{
+  width: 100px;
+  padding: 4px;
+  margin-left: 10px;
+}
+
+.login{
+  border-radius: 10px;
+  background-color:#5568fe;
+  font-size: 12pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 6px 9px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.login a {
+  color:#CBD0F7;
+  text-decoration: none;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 4px;
+  margin-left: 10px;
+}
+.link-github{
+  margin-left: 50px;
+}
+.link-github img{
+  width: 30px;
+  height: 30px;
+}
+.link-TFT img{
+  width: 100px;
+  height: 30px;
+}

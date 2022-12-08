@@ -1,0 +1,105 @@
+.area-heroi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.tutilo{
+  color: #f5f5f5;
+  font-weight: bold;
+}
+.imagem{
+  display: flex;
+}
+.imagem img{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+.borda-cinza{
+  border-style: solid;
+  border-radius: 100px;
+  border-color: rgb(202, 202, 202);
+}
+.borda-azul{
+  border-style: solid;
+  border-radius: 100px;
+  border-color: rgb(4, 1, 185);
+}
+.borda-verde{
+  border-style: solid;
+  border-radius: 100px;
+  border-color: rgb(0, 136, 41);
+}
+.borda-roxa{
+  border-style: solid;
+  border-radius: 100px;
+  border-color: rgb(90, 0, 126);
+}
+.borda-dourada{
+  border-style: solid;
+  border-radius: 100px;
+  border-color: rgb(248, 252, 1);
+}
+
+.mod-heroi img{
+  height: 200px;
+  width: 200px;
+}
+.mod-heroi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 550px;
+  border-radius: 35px;
+}
+
+.mod-heroi form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.mod-heroi input{
+  margin-top: 10px;
+  background-color: #252A34;
+  color: #CBD0F7;
+  border:none;
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+.mod-heroi label{
+  margin-top: 10px;
+  background-color: #252A34;
+  color: #CBD0F7;
+  border:none;
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+.mod-heroi button{
+  margin-top: 10px;
+  background-color: #5568fe;
+  color: #CBD0F7;
+  border:none;
+  height: 35px;
+  outline: none;
+  border-radius: 8px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input::placeholder{
+  color:#CBD0F7;
+  font-size: 14px;
+}

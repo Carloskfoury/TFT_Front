@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup } from '@angular/forms';
 import { Heroi } from 'src/app/Model/heroi.model';
 import { HeroiService } from 'src/app/Services/heroi-service';
+import { ItensService } from 'src/app/Services/itens-service';
+import { Itens } from 'src/app/Model/itens.model';
 
 
 @Component({
@@ -11,28 +13,46 @@ import { HeroiService } from 'src/app/Services/heroi-service';
 })
 export class FormsComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private heroiservice:HeroiService) { }
+  constructor(private formBuilder: FormBuilder, private heroiservice:HeroiService, private itensService:ItensService) { }
+
+  NovoHeroi!: FormGroup
+  itens?: Itens []
 
   ngOnInit(): void {
-  }
-   GrupoHeroi =  this.formBuilder.group({
-    heroiNome: ""
+    this.NovoHeroi =  this.formBuilder.group({
+      heroiNome: "",
+      foto:"",
+      estrela: 0,
+      itens:[]
   })
+  this.ShowItens()
+}
 
   SubmitHeroi(){
-    console.log(this.GrupoHeroi.value)
-    var HeroiNome = this.GrupoHeroi.value
-    if(HeroiNome !=null || HeroiNome != undefined){
+    var HeroiForms = this.NovoHeroi.value
+    var Heroi:Heroi | undefined;
 
-      this.Post(HeroiNome)
+      Heroi={
+        heroiNome: HeroiForms.heroiNome,
+        foto: HeroiForms.foto,
+        estrela: HeroiForms.estrela,
+        sinergias:[],
+        itens: HeroiForms.itens
+      }
 
-    }
-    if (HeroiNome === null){
+      this.Post(Heroi)
+
+
+    if (Heroi === null){
       console.warn("Não colocou o nome do Heroi.")
     }
   }
 
-  Post(Nome:Object){
-   return this.heroiservice.postHeroi(Nome)
+  Post(Heroi:Heroi){
+   return this.heroiservice.postHeroi(Heroi)
+  }
+
+  ShowItens(){
+    this.itensService.getItem().subscribe(data => this.itens = data);
   }
 }

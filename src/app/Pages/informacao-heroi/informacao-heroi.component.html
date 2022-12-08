@@ -1,14 +1,26 @@
-<div *ngFor="let item of heroi.itens">
-  <div>
-    <h6>{{item.itensNome}}</h6>
-    <p>{{item.itensAtributos}}</p>
+<div class="card-container">
+  <div class="card-image" [ngClass]="{'borda-cinza': heroi.estrela === 1, 'borda-verde': heroi.estrela === 2,
+  'borda-azul': heroi.estrela === 3, 'borda-roxa': heroi.estrela === 4, 'borda-dourada': heroi.estrela === 5}">
+    <img class="foto-heroi"  [src]="heroi.foto">
+  </div>
+  <div class="card-nomeheroi">
+    <h1>{{heroi.heroiNome}}</h1>
+  </div>
+  <div class="card-text">
+    <div class="card-sinergia" *ngFor="let sinergia of heroi.sinergias">
+      <h4>{{sinergia.sinergiaNome}}</h4>
+      <h5>{{sinergia.sinergiaBuff}}</h5>
+    </div>
+    <div class="card-itens" *ngFor="let item of heroi.itens">
+      <h4>{{item.itensNome}}</h4>
+      <h5>{{item.itensAtributos}}</h5>
+    </div>
+  </div>
+  <div class="card-buttons">
+      <button class="text-delete" type="button" (click)="deleteHeroi(heroi.id)">Deletar</button>
+      <button class="text-modificar" (click)="abrirModal()"> Modificar</button>
+  </div>
+  <div *ngIf="mostrar"  class="modal">
+    <app-modificador-heroi [heroi]="heroi"></app-modificador-heroi>
   </div>
 </div>
-<div *ngFor="let sinergia of heroi.sinergias">
-  <h6>{{sinergia.sinergiaNome}}</h6>
-  <p>{{sinergia.sinergiaBuff}}</p>
-</div>
-<div>
-  <app-modificador-heroi [heroi]="heroi"></app-modificador-heroi>
-</div>
-

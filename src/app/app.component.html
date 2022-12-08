@@ -1,36 +1,38 @@
-<div class="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" routerLink="/home" routerLinkActive="active">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <div class="dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Heroi
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" routerLink="/heroi" routerLinkActive="active">Herois</a>
-                <a class="dropdown-item" routerLink="/criarHeroi"routerLinkActive="active">Criar Heroi</a>
-              </div>
-          </div>
-          </li>
-
-            <li class="nav-item active">
-              <a class="nav-link" routerLink="/sinergias" routerLinkActive="active">Sinergias</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/itens" routerLinkActive="active">Itens</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<div class="containerMain" >
+  <div class="header">
+    <div class="logo">
+      <img src="https://cdn-ggtech.s3-eu-west-3.amazonaws.com/uploads/games/logos/1630585636661_tft-bug-flat-white2.png" alt="Logo">
+    </div>
+    <div class="container-links">
+      <div class="container-link">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+      </div>
+      <div class="container-link">
+        <a routerLink="/heroi" routerLinkActive="active">Herois</a>
+      </div>
+      <div class="container-link">
+        <a routerLink="/criarHeroi"routerLinkActive="active">Criar Heroi</a>
+      </div>
+      <div class="container-link">
+        <a routerLink="/sinergias" routerLinkActive="active">Sinergias</a>
+      </div>
+      <div class="container-link">
+        <a routerLink="/itens" routerLinkActive="active">Itens</a>
+      </div>
+    </div>
+    <div class="login">
+      <a routerLink="/Login" routerLinkActive="active">Login
+      </a>
+    </div>
   </div>
-  <div class="content">
+</div>
     <router-outlet></router-outlet>
-  </div>
   <div class="footer">
-    <h2>footer</h2>
+    <div class="link-TFT">
+      <a href="https://teamfighttactics.leagueoflegends.com/pt-br/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Teamfight_Tactics_logo.svg/1200px-Teamfight_Tactics_logo.svg.png"></a>
+    </div>
+    <div class="link-github">
+     <a href="https://github.com/Carloskfoury" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" >
+    </a>
+    </div>
 </div>

@@ -35,6 +35,8 @@ export class FormsLoginComponent implements OnInit {
     }
   }
 
+
+
   Post(cliente:object){
     return this.loginService.novoUsuario(cliente)
   }

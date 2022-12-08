@@ -1,8 +1,33 @@
-<form [formGroup]="NovoHeroi" (ngSubmit)="SubmitHeroi()">
-  <div class="form-group">
-    <label for="heroiNome">Nome do Heroi</label>
-    <input type="text" formControlName="heroiNome" class="form-control" aria-describedby="heroiHelp" placeholder="Digite nome do Heroi">
-    <small id="heroiHelp" class="form-text text-muted">Informe o novo nome do Heroi</small>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+<section class="area-heroi" >
+  <div class="mod-heroi">
+    <div class="titulo" >
+      <h1>Modifique o Heroi {{heroi.heroiNome}}</h1>
+    </div>
+    <div class="imagem"  [ngClass]="{'borda-cinza': heroi.estrela === 1, 'borda-verde': heroi.estrela === 2,
+    'borda-azul': heroi.estrela === 3, 'borda-roxa': heroi.estrela === 4, 'borda-dourada': heroi.estrela === 5}">
+      <img src={{heroi.foto}}>
+    </div>
+  <form [formGroup]="NovoHeroi" (ngSubmit)="SubmitHeroi()" >
+        <input type="text" formControlName="heroiNome" class="form-control" aria-describedby="heroiHelp" placeholder="Digite o novo nome do Heroi" required minlength="2">
+        <input type="text" formControlName="foto"  placeholder="Insira o link da imagem do heroi criado">
+        <label for="Estrela">Estrela do Heroi :
+          <select name="estrela" id="estrela-forms" formControlName="estrela" class="custom-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </label>
+          <label for="itens">Item do heroi
+          <select name="itens" id="" >
+          <option *ngFor="let item of itens"> {{item.itensNome}}</option>
+          </select>
+        </label>
+      <button type="submit" class="Enviar">Enviar</button>
+      <button (click)="fecharModal()">Voltar
+      </button>
+  </form>
   </div>
-</form>
+</section>
+

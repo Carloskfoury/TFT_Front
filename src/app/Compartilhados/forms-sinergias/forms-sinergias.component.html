@@ -1,12 +1,15 @@
-<form [formGroup]="GrupSinergias" (ngSubmit)="SubmitSinergia()">
-  <div class="form-group">
-    <label for="sinergiaNome">Nome da Sinergia</label>
-    <input type="text" formControlName="sinergiaNome" class="form-control" aria-describedby="itemHelp" placeholder="Digite nome do Item">
-    <label for="itensAtributos">Efeito do item</label>
-    <input type="text" formControlName="itensAtributos" class="form-control" aria-describedby="itemHelp" placeholder="Digite qual é o efeito que o item  faz">
-    <small id="itemHelp" class="form-text text-muted">Informe o nome do Item e efeito para gerar um novo</small>
+<section class="area-sinergia">
+  <div class="sinergias">
+    <form [formGroup]="GrupSinergias" (ngSubmit)="SubmitSinergia()">
+      <div class="form-group">
+        <label for="sinergiaNome">Nome da Sinergia</label>
+        <input type="text" formControlName="sinergiaNome" class="form-control" aria-describedby="itemHelp" placeholder="Digite nome do Item">
+        <label for="itensAtributos">Efeito do item</label>
+        <input type="text" formControlName="itensAtributos" class="form-control" aria-describedby="itemHelp" placeholder="Digite qual é o efeito que o item  faz">
+        <small id="itemHelp" class="form-text text-muted">Informe o nome do Item e efeito para gerar um novo</small>
+      </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
   </div>
-<button type="submit" class="btn btn-primary">Enviar</button>
-</form>
-
+</section>
 

@@ -1,0 +1,87 @@
+.area-heroi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.titulo{
+  color: #CBD0F7;
+  font-weight: bold;
+}
+.area-heroi img{
+  height: 150px;
+  width: 150px;
+}
+.novo-heroi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #181920;
+  width: 500px;
+  height: 520px;
+  padding: 35px;
+  border-radius: 35px;
+}
+
+.novo-heroi form{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.novo-heroi input{
+  margin-top: 10px;
+  background-color: #252A34;
+  color: #CBD0F7;
+  border:none;
+  height: 45px;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+
+
+.novo-heroi label{
+  margin-top: 10px;
+  height: 45px;
+  background-color: #252A34;
+  color: #CBD0F7;
+  border:none;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+.novo-heroi button{
+  margin-top: 10px;
+  background-color: #5568fe;
+  color: #CBD0F7;
+  border:none;
+  height: 45px;
+  outline: none;
+  border-radius: 8px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.novo-heroi button:hover{
+  transform: scale(1.1);
+}
+input::placeholder{
+  color:#CBD0F7;
+  font-size: 14px;
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+}
+
+
